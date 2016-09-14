@@ -10,16 +10,16 @@ import UIKit
 
 @objc
 public protocol ALTextInputBarDelegate: NSObjectProtocol {
-    optional func textViewShouldBeginEditing(textView: ALTextView) -> Bool
-    optional func textViewShouldEndEditing(textView: ALTextView) -> Bool
+    @objc optional func textViewShouldBeginEditing(_ textView: ALTextView) -> Bool
+    @objc optional func textViewShouldEndEditing(_ textView: ALTextView) -> Bool
     
-    optional func textViewDidBeginEditing(textView: ALTextView)
-    optional func textViewDidEndEditing(textView: ALTextView)
+    @objc optional func textViewDidBeginEditing(_ textView: ALTextView)
+    @objc optional func textViewDidEndEditing(_ textView: ALTextView)
     
-    optional func textViewDidChange(textView: ALTextView)
-    optional func textViewDidChangeSelection(textView: ALTextView)
+    @objc optional func textViewDidChange(_ textView: ALTextView)
+    @objc optional func textViewDidChangeSelection(_ textView: ALTextView)
     
-    optional func textView(textView: ALTextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool
+    @objc optional func textView(_ textView: ALTextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool
     
-    optional func inputBarDidChangeHeight(height: CGFloat)
+    @objc optional func inputBarDidChangeHeight(_ height: CGFloat)
 }
