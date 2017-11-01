@@ -146,7 +146,7 @@ open class ALTextView: UITextView {
         var newHeight: CGFloat = 0
         
         if let font = font {
-            let attributes = [NSFontAttributeName: font]
+            let attributes = [NSAttributedStringKey.font: font]
             let boundingSize = CGSize(width: frame.size.width, height: CGFloat.greatestFiniteMagnitude)
             let size = (text as NSString).boundingRect(with: boundingSize, options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: attributes, context: nil)
             newHeight = ceil(size.height)
